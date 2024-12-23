@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="hardware_list">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <h2>Hardware List</h2>
+                        <p>This object's name is <span t-field="o.name"/></p>
+                        <p>This object's serial is <span t-field="o.serial"/></p>
+                        <p>This object's model is <span t-field="o.model"/></p>
+                        <p>This object's photo is <img t-att-src="'data:image/png;base64,%s' % to_text(o.photo)"/></p>
+                    </div>
+                    <t t-foreach="o.software_ids" t-as="software">
+                        <div>
+                            <h2>Software List</h2>
+                            <p>This object's name is <span t-field="software.software_id.name"/></p>  
+                        </div>
+                    </t>
+                </t>
+            </t>
+            
+        </t>
+    </template>
+    
+    <report id="it_hardware_report"
+            model="it.mng.hardware" 
+            string="Hardware List" 
+            report_type="qweb-pdf" 
+            name="it_mng.hardware_list"
+            file="it_mng.hardware_list"/>    
+
+</odoo>

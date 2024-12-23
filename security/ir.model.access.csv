@@ -1,0 +1,11 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_it_mng_brands_user,it_mng.it_mng_brands,model_it_mng_brands,it_mng.group_it_mng_user,1,1,1,1
+access_it_mng_record_user,it_mng.it_mng_record_type,model_it_mng_record_type,it_mng.group_it_mng_user,1,1,1,1
+access_it_mng_software_type_user,it_mng.it_mng_software_types,model_it_mng_software_types,it_mng.group_it_mng_user,1,1,1,1
+access_it_mng_hardware_type_user,it_mng.it_mng_hardware_type,model_it_mng_hardware_type,it_mng.group_it_mng_user,1,1,1,1
+access_it_mng_software_user,it_mng.it_mng_software,model_it_mng_software,it_mng.group_it_mng_user,1,1,1,1
+access_it_mng_area_user,it_mng.it_mng_area,model_it_mng_area,it_mng.group_it_mng_user,1,1,1,1
+access_it_mng_hardware_user,it_mng.it_mng_hardware,model_it_mng_hardware,it_mng.group_it_mng_user,1,1,1,1
+access_it_mng_hardware_record_user,it_mng.it_mng_hardware_record,model_it_mng_hardware_record,it_mng.group_it_mng_user,1,1,1,1
+access_it_mng_software_licence_user,it_mng.it_mng_software_licence,model_it_mng_software_licence,it_mng.group_it_mng_user,1,1,1,1
+access_it_mng_hardware_manager,it_mng_hardware_manager,model_it_mng_hardware,,1,1,1,1

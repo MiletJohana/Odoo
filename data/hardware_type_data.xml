@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="it_mng_hardware_type_computer" model="it.mng.hardware.type">
+        <field name="name">Computer</field>
+        <field name="initials">CPT</field>
+    </record>
+    <record id="it_mng_hardware_type_mouse" model="it.mng.hardware.type">
+        <field name="name">Mouse</field>
+        <field name="initials">MSE</field>
+    </record>
+    <record id="it_mng_hardware_type_keyboard" model="it.mng.hardware.type">
+        <field name="name">Keyboard</field>
+        <field name="initials">KBD</field>
+    </record>
+    <record id="it_mng_hardware_type_display" model="it.mng.hardware.type">
+        <field name="name">Display</field>
+        <field name="initials">DSP</field>
+    </record>
+</odoo>

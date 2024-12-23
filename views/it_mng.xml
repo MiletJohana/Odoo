@@ -1,0 +1,564 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="it_mng_brands_form" model="ir.ui.view">
+        <field name="name">it.mng.brands.form</field>
+        <field name="model">it.mng.brands</field>
+        <field name="arch" type="xml">
+            <form string="Brand Management" version="15.0">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" string="Marca"/>
+                        </group>
+                        <group>
+                            <field name="logo" widget="image" class="oe_avatar" string="Brand Logo"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="it_mng_brands_tree" model="ir.ui.view">
+        <field name="name">it.mng.brands.tree</field>
+        <field name="model">it.mng.brands</field>
+        <field name="arch" type="xml">
+            <tree string="Brands">
+                <field name="name" string="Brand Name"/>
+                <field name="logo" widget="image" class="oe_avatar" string="Logo"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="it_mng_brands_kanban" model="ir.ui.view">
+        <field name="name">it.mng.brands.kanban</field>
+        <field name="model">it.mng.brands</field>
+        <field name="arch" type="xml">
+             <kanban class="o_kanban_view">
+                <field name="logo" widget="image"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="oe_kanban_global_click o_kanban_record">
+                            <div class="o_kanban_image">
+                                <field name="logo" widget="image"/>
+                            </div>
+                            <div class="o_kanban_details">
+                                <strong>
+                                    <field name="name"/>
+                                </strong>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+
+    <record id="action_brands" model="ir.actions.act_window">
+        <field name="name">Brand</field>
+        <field name="res_model">it.mng.brands</field>
+        <field name="view_mode">kanban,tree,form</field>      
+    </record>
+
+    <!-- Vista de formulario para el modelo Record Type -->
+    <record id="it_mng_record_form" model="ir.ui.view">
+        <field name="name">it.mng.record.type.form</field>
+        <field name="model">it.mng.record.type</field>
+        <field name="arch" type="xml">
+            <form string="recod_type" version="15.0">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" string="Record Type Name"/>
+                        </group>
+                        <group>
+                            <field name="initials" string="Initials"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="it_mng_record_tree" model="ir.ui.view">
+        <field name="name">it.mng.record.type.tree</field>
+        <field name="model">it.mng.record.type</field>
+        <field name="arch" type="xml">
+            <tree string="recod_type">
+                <field name="name" string="Record Type Name"/>
+                <field name="initials" string="Initials"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_record" model="ir.actions.act_window">
+        <field name="name">Record Type</field>
+        <field name="res_model">it.mng.record.type</field>
+        <field name="view_mode">tree,form</field>      
+    </record>
+
+    <!-- Vista de formulario para el modelo Software Types -->
+    <record id="it_mng_software_type_form" model="ir.ui.view">
+        <field name="name">it.mng.software.types.form</field>
+        <field name="model">it.mng.software.types</field>
+        <field name="arch" type="xml">
+            <form string="software_type" version="15.0">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" string="Software Type Name"/>
+                        </group>
+                        <group>
+                            <field name="initials" string="Initials"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="it_mng_software_type_tree" model="ir.ui.view">
+        <field name="name">it.mng.software.types.tree</field>
+        <field name="model">it.mng.software.types</field>
+        <field name="arch" type="xml">
+            <tree string="Software Type">
+                <field name="name" string="Software Type Name"/>
+                <field name="initials" string="Initials"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_software_type" model="ir.actions.act_window">
+        <field name="name">Software Type</field>
+        <field name="res_model">it.mng.software.types</field>
+        <field name="view_mode">tree,form</field>      
+    </record>
+
+    <!-- Vista de formulario para el modelo Hrdware Types -->
+    <record id="it_mng_hardware_type_form" model="ir.ui.view">
+        <field name="name">it.mng.hardware.type.form</field>
+        <field name="model">it.mng.hardware.type</field>
+        <field name="arch" type="xml">
+            <form string="hardware_type" version="15.0">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" string="Hardware Type Name"/>
+                        </group>
+                        <group>
+                            <field name="initials" string="Initials"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="it_mng_hardware_type_tree" model="ir.ui.view">
+        <field name="name">it.mng.hardware.type.tree</field>
+        <field name="model">it.mng.hardware.type</field>
+        <field name="arch" type="xml">
+            <tree string="Hardware Type">
+                <field name="name" string="Hardware Type Name"/>
+                <field name="initials" string="Initials"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_hardware_type" model="ir.actions.act_window">
+        <field name="name">Hardware Type</field>
+        <field name="res_model">it.mng.hardware.type</field>
+        <field name="view_mode">tree,form</field>      
+    </record>
+
+
+    <!-- Vista de formulario para el modelo IT_Software -->
+    <record id="it_mng_software_form" model="ir.ui.view">
+        <field name="name">it.mng.software.form</field>
+        <field name="model">it.mng.software</field>
+        <field name="arch" type="xml">
+            <form string="software" version="15.0">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" string="Nombre del software"/>
+                            <field name="version" string="Version"/>
+                        </group>
+                        <group>
+                            <field name="software_type_id" string="Tipo de software"/>
+                            <field name="brand_id" string="Marcas"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="it_mng_software_tree" model="ir.ui.view">
+        <field name="name">it.mng.software.tree</field>
+        <field name="model">it.mng.software</field>
+        <field name="arch" type="xml">
+            <tree string="Software">
+                <field name="name" string="Software"/>
+                <field name="version" string="Version"/>
+                <field name="software_type_id" string="Tipo de Software"/>
+                <field name="brand_id" string="Marcas"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_software" model="ir.actions.act_window">
+        <field name="name">Software</field>
+        <field name="res_model">it.mng.software</field>
+        <field name="view_mode">tree,form</field>      
+    </record>
+
+    <!-- Vista de formulario para el modelo Area -->
+    <record id="it_mng_area" model="ir.ui.view">
+        <field name="name">it.mng.area.form</field>
+        <field name="model">it.mng.area</field>
+        <field name="arch" type="xml">
+            <form string="Area" version="15.0">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" string="Area"/>
+                            <field name="initials" string="Initials"/>
+                        </group>
+                        <group>
+                            <field name="father_id" string="Area Padre" invisible='1'/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string='Child Areas'>
+                            <field name="father_ids"/>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="it_mng_area_tree" model="ir.ui.view">
+        <field name="name">it.mng.area.tree</field>
+        <field name="model">it.mng.area</field>
+        <field name="arch" type="xml">
+            <tree string="Area">
+                <field name="name" string="Name"/>
+                <field name="initials" string="Initials"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_area" model="ir.actions.act_window">
+        <field name="name">Area</field>
+        <field name="res_model">it.mng.area</field>
+        <field name="view_mode">tree,form</field>      
+    </record>
+
+    <!-- Vista de formulario para el modelo Hardware -->
+    <record id="it_mng_hardware_form" model="ir.ui.view">
+        <field name="name">it.mng.hardware.form</field>
+        <field name="model">it.mng.hardware</field>
+        <field name="arch" type="xml">
+            <form string="Gestión de Hardware" version="15.0">
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button class="oe_stat_button" type="object" name="action_view_tickets" icon="fa-ticket" >
+                            <field name="ticket_count" widget="statinfo" string="Tickets"/>
+                        </button>
+                    </div>
+                   <group col="2">
+                        <group string="General Information">
+                            <field name="name" string="Name" readonly="1"/>
+                            <field name="name" string="Name" invisible="1"/>
+                            <field name="serial" string="Serial Number"/>
+                            <field name="model" string="Model" />
+                            <field name="description" string="Description"/>
+                        </group>
+                        <group string="Imagen">
+                            <field name="photo" widget="image" class="oe_avatar" string="Photo"/>
+                            <group string="Details">
+                                <field name="hardware_type_id" string="Hardware Type"/>
+                                <field name="brand_id" string="Brand"/>
+                                <field name="area_id" string="Location"/>
+                            </group>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="General Information">
+                            <group>
+                                <group colspan="2">
+                                    <group col="2" string="General Details">
+                                        <field name="purchase" string="Purchase Date"/>
+                                        <field name="employee_id" string="Employee"/>
+                                        <field name="father_id" string="Hardware" readonly="1"/>
+                                    </group>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Hardware Components">
+                            <field name="child_ids" />
+                        </page>
+                        <page string="Software">
+                            <field name="software_ids"/>
+                        </page>
+                        <page string="Tickets">
+                            <field name="ticket_ids"/>
+                        </page>
+                        <page string="Records">
+                            <field name="record_ids" widget="one2many" mode="tree" context="{'default_hardware_id': active_id}">
+                                <tree>
+                                    <field name="record_types_id"/>
+                                    <field name="description"/>
+                                    </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="vit_mng_hardware_tree" model="ir.ui.view">
+        <field name="name">it.mng.hardware.tree</field>
+        <field name="model">it.mng.hardware</field>
+        <field name="arch" type="xml">
+            <tree string="Hardware">
+                <field name="name" string="Nombre"/>
+                <field name="serial" string="Número de Serie"/>
+                <field name="model" string="Modelo"/>
+                <field name="area_id" string="Área"/>
+                <field name="brand_id" string="Marca"/>
+                <field name="purchase" string="Fecha de Compra"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="it_mng_hardware_kanban" model="ir.ui.view">
+        <field name="name">it.mng.hardware.kanban</field>
+        <field name="model">it.mng.hardware</field>
+        <field name="arch" type="xml">
+            <kanban class="o_kanban_view">
+                <field name="photo" widget="image"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="oe_kanban_global_click o_kanban_record">
+                            <div class="o_kanban_image">
+                                <field name="photo" widget="image"/>
+                            </div>
+                            <div class="o_kanban_details">
+                                <strong>
+                                    <field name="name"/>
+                                </strong>
+                                <br/>
+                                <span>
+                                    <field name="area_id" placeholder="Área"/>
+                                </span>
+                                <br/>
+                                <span>
+                                    <field name="employee_id" placeholder="Empleado"/>
+                                </span>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+
+    <record id="action_hardware" model="ir.actions.act_window">
+        <field name="name">Hardware</field>
+        <field name="res_model">it.mng.hardware</field>
+        <field name="view_mode">kanban,tree,form</field>      
+    </record>
+
+    <!-- Vista de formulario para el modelo Record Hardware -->
+    <record id="it_mng_hardware_record_form" model="ir.ui.view">
+        <field name="name">it.mng.hardware.record.form</field>
+        <field name="model">it.mng.hardware.record</field>
+        <field name="arch" type="xml">
+            <form string="Registro de Hardware" version="15.0">
+                <sheet>
+                    <group colspan="2" string="Información del Registro de Hardware">
+                        <group string="Detalles Generales" colspan="1">
+                            <field name="hardware_id" string="Hardware"/>
+                            <field name="record_types_id" string="Tipo de Registro"/>
+                            <field name="description" string="Descripción"/>
+                        </group>
+                        <group string="Detalles de Enlace" colspan="1">
+                            <field name="link_id" string="Link" placeholder="URL o enlace relacionado"/>
+                            <field name="link_object_id" string="Objeto relacionado"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="it_mng_hardware_record_tree" model="ir.ui.view">
+        <field name="name">it.mng.hardware.record.tree</field>
+        <field name="model">it.mng.hardware.record</field>
+        <field name="arch" type="xml">
+            <tree string="Lista de Registros de Hardware">
+                <field name="hardware_id" string="Hardware"/>
+                <field name="record_types_id" string="Tipo de Registro"/>
+                <field name="description" string="Descripción"/>
+                <field name="link_id" string="Link"/>
+                <field name="link_object_id" string="Objeto Relacionado"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_hardware_record" model="ir.actions.act_window">
+        <field name="name">Record Hardware</field>
+        <field name="res_model">it.mng.hardware.record</field>
+        <field name="view_mode">tree,form</field>      
+    </record>
+
+     <!-- Vista de formulario para el modelo Record Hardware -->
+    <record id="it_mng_software_licence_record_form" model="ir.ui.view">
+        <field name="name">it.mng.software_licence.form</field>
+        <field name="model">it.mng.software.licence</field>
+        <field name="arch" type="xml">
+            <form string="Licencia de Software" version="15.0">
+                <sheet>
+                    <group string="Información de Licencia" colspan="2">
+                        <group>
+                            <field name="license" string="Código de Licencia" placeholder="Ingrese el código de la licencia"/>
+                            <field name="hardware_id" string="Hardware Asociado"/>
+                        </group>
+                        <group>
+                            <field name="software_id" string="Software" placeholder="Seleccione el software"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    
+    <record id="it_mng_software_licence_tree_view" model="ir.ui.view">
+        <field name="name">it.mng.software_licence.tree</field>
+        <field name="model">it.mng.software.licence</field>
+        <field name="arch" type="xml">
+            <tree string="Licencias de Software">
+                <field name="license" string="Código de Licencia"/>
+                <field name="hardware_id" string="Hardware Asociado"/>
+                <field name="software_id" string="Software"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_software_licence" model="ir.actions.act_window">
+        <field name="name">Licencias de Software</field>
+        <field name="res_model">it.mng.software.licence</field>
+        <field name="view_mode">tree,form</field>      
+    </record>
+
+    <record id="it_mng_ticket_view_form" model="ir.ui.view">
+        <field name="name">helpdesk.ticket.view.form</field>
+        <field name="model">helpdesk.ticket</field>
+        <field name="inherit_id" ref="helpdesk.helpdesk_ticket_view_form"/>
+        <field name="arch" type="xml">
+            <group>
+                <group>
+                    <field name="hardware_id" string="Hardware"/>
+                </group>
+            </group>
+        </field>
+    </record>
+
+   <menuitem 
+    id="menu_it_management"
+    name="IT Management"
+    sequence="100"
+    groups="base.group_user">
+
+    <!-- Inventory Menu -->
+    <menuitem
+        id="menu_inventory"
+        name="Inventory"
+        sequence="1">
+        <menuitem
+            id="menu_inventory_hardware"
+            name="Hardware"
+            action="action_hardware"
+            sequence="2"/>
+        <menuitem
+            id="menu_inventory_software"
+            name="Software"
+            action="action_software"
+            sequence="3"/>
+        <menuitem
+            id="menu_inventory_hardware_record"
+            name="Record Hardware"
+            action="action_hardware_record"
+            sequence="4"/>
+        <menuitem
+            id="menu_inventory__licence_record"
+            name="Software Licence"
+            action="action_software_licence"
+            sequence="5"/>
+        
+    </menuitem>
+
+    <menuitem
+        id="menu_operations"
+        name="Operations"
+        sequence="2">
+        
+        <menuitem
+            id="menu_operations_records"
+            name="Record Type"
+            action="action_record"
+            sequence="1"/>
+    </menuitem>
+
+    <menuitem
+        id="menu_reports"
+        name="Reports"
+        sequence="3">
+        
+        <menuitem
+            id="menu_reports_hardware_inventory"
+            name="Hardware Inventory"
+            sequence="1"/>
+    </menuitem>
+
+    <menuitem
+        id="menu_configuration"
+        name="Configuration"
+        sequence="4">
+        
+        <menuitem
+            id="menu_configuration_inventory"
+            name="Inventory"
+            sequence="1"/>
+        
+        <menuitem
+            id="menu_configuration_brands"
+            name="Brands"
+            action="action_brands"
+            sequence="2"/>
+        
+        <menuitem
+            id="menu_configuration_hardware_types"
+            name="Hardware Types"
+            action="action_hardware_type"
+            sequence="3"/>
+        
+        <menuitem
+            id="menu_configuration_software_types"
+            name="Software Types"
+            action="action_software_type"
+            sequence="4"/>
+        <menuitem
+            id="menu_configuration_area"
+            name="Area"
+            action="action_area"
+            sequence="5"/>
+    </menuitem>
+</menuitem>
+</odoo>

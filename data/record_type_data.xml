@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="it_mng_record_type_machine" model="it.mng.record.type">
+        <field name="name">Create Machine</field>
+        <field name="initials">CM</field>
+    </record>
+    <record id="it_mng_record_type_software" model="it.mng.record.type">
+        <field name="name">Create Software</field>
+        <field name="initials">CS</field>
+    </record>
+    <record id="it_mng_record_type_ticket" model="it.mng.record.type">
+        <field name="name">Support Tickets</field>
+        <field name="initials">ST</field>
+    </record>
+</odoo>
